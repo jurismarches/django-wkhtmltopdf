@@ -13,7 +13,10 @@ setup(
     author=wkhtmltopdf.__author__,
     author_email='admin@incuna.com',
     url='https://github.com/incuna/django-wkhtmltopdf',
-    install_requires=['Django>=1.3'],
+    install_requires=[
+        'Django>=1.3',
+        'six>=1.5.2'
+    ],
     zip_safe=False,
 )
 

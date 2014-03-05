@@ -2,13 +2,13 @@ from __future__ import absolute_import
 
 import os
 import re
+import six
 import sys
 
 from copy import copy
 from itertools import chain
 
 from django.conf import settings
-from django.utils import six
 
 from .subprocess import check_output
 
