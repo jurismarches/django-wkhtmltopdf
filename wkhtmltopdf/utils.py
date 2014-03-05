@@ -22,7 +22,7 @@ def _options_to_args(**options):
             continue
         flags.append('--' + name.replace('_', '-'))
         if value is not True:
-            flags.append(six.u(value))
+            flags.append(six.b(value))
     return flags
 
 
