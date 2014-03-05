@@ -1,4 +1,4 @@
-import six
+import sys
 import wkhtmltopdf
 
 from setuptools import setup, find_packages
@@ -7,7 +7,7 @@ requires = [
     'six>=1.5.2'
 ]
 
-if six.PY3:
+if sys.version_info[0] == 3:
     requires.append('Django>=1.5')
 else:
     requires.append('Django>=1.3')
