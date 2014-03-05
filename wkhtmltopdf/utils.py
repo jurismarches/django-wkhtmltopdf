@@ -126,8 +126,8 @@ def http_quote(string):
 
 def pathname2fileurl(pathname):
     """Returns a file:// URL for pathname. Handles OS-specific conversions."""
-    return six.moves.urlparse.urljoin(
-        'file:', six.moves.urllib.pathname2url(pathname))
+    return six.moves.urllib.parse.urljoin(
+        'file:', six.moves.urllib.request.pathname2url(pathname))
 
 
 def make_absolute_paths(content):
