@@ -1,6 +1,16 @@
+import six
+import wkhtmltopdf
+
 from setuptools import setup, find_packages
 
-import wkhtmltopdf
+requires = [
+    'six>=1.5.2'
+]
+
+if six.PY3:
+    requires.append('Django>=1.5')
+else:
+    requires.append('Django>=1.3')
 
 
 setup(
@@ -13,10 +23,6 @@ setup(
     author=wkhtmltopdf.__author__,
     author_email='admin@incuna.com',
     url='https://github.com/incuna/django-wkhtmltopdf',
-    install_requires=[
-        'Django>=1.3',
-        'six>=1.5.2'
-    ],
+    install_requires=requires,
     zip_safe=False,
 )
-
