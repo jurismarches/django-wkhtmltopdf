@@ -1,10 +1,11 @@
 from __future__ import absolute_import
 
-from copy import copy
-from itertools import chain
 import os
 import re
 import sys
+
+from copy import copy
+from itertools import chain
 
 from django.conf import settings
 from django.utils import six
